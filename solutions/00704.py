@@ -10,7 +10,7 @@ class Solution:
 
     def search(self, nums: List[int], target: int) -> int:
         """
-        Time:  O(log(n))
+        Time:  O(logn)
         Space: O(1)
         """
         idx_l = 0
