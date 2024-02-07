@@ -40,12 +40,12 @@ class Solution:
             return idx_m
 
         elif nums[idx_m] > target:
-            idx = self.search(nums[:idx_m], target)
+            idx = self.search_recursive(nums[:idx_m], target)
             if idx != -1:
                 return idx
 
         else:
-            idx = self.search(nums[idx_m+1:], target)
+            idx = self.search_recursive(nums[idx_m+1:], target)
             if idx != -1:
                 return idx+idx_m+1
 
