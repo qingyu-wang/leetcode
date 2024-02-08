@@ -7,14 +7,13 @@ from typing import List
 
 
 class Solution:
+    """
+    Time:   O(n)
+    Space:  O(1)
 
+    Two Pointers
+    """
     def removeElement(self, nums: List[int], val: int) -> int:
-        """
-        Time:  O(n)
-        Space: O(1)
-
-        Two Pointers
-        """
         slow = 0
         for fast in range(len(nums)):
             if nums[fast] != val:
@@ -22,14 +21,15 @@ class Solution:
                 slow += 1
         return slow
 
+
+class Solution:
+    """
+    Time:   O(n)
+    Space:  O(1)
+
+    Two Pointers
+    """
     def removeElement(self, nums: List[int], val: int) -> int:
-        """
-        Time:  O(n)
-        Space: O(1)
-
-        Two Pointers
-        """
-
         fast = 0  # fast pointer
         slow = 0  # slow pointer
         size = len(nums)
@@ -40,11 +40,13 @@ class Solution:
             fast += 1
         return slow
 
+
+class Solution:
+    """
+    Time:   O(n)
+    Space:  O(1)
+    """
     def removeElement(self, nums: List[int], val: int) -> int:
-        """
-        Time:  O(n)
-        Space: O(1)
-        """
         n = len(nums)
         p = 0
         for i in range(n):

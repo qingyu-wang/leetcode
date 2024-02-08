@@ -4,15 +4,14 @@ https://leetcode.com/problems/reverse-vowels-of-a-string/description/
 """
 
 class Solution:
+    """
+    Time:   O(n)
+    Space:  O(1)
 
+    Time: n
+    2 pointers
+    """
     def reverseVowels(self, s: str) -> str:
-        """
-        Time:  O(n)
-        Space: O(1)
-
-        Time: n
-        2 pointers
-        """
         s = list(s)
         ps = 0
         pe = len(s)-1
@@ -28,13 +27,15 @@ class Solution:
         s = "".join(s)
         return s
 
-    def reverseVowels(self, s: str) -> str:
-        """
-        Time:  O(n)
-        Space: O(1)
 
-        Time: 2n
-        """
+class Solution:
+    """
+    Time:   O(n)
+    Space:  O(1)
+
+    Time: 2n
+    """
+    def reverseVowels(self, s: str) -> str:
         cache = ""
         for i in s:
             if i.lower() in "aeiou":

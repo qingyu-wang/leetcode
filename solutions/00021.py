@@ -14,12 +14,11 @@ class ListNode:
 
 
 class Solution:
-
+    """
+    Time:   O(n)
+    Space:  O(1)
+    """
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        """
-        Time:  O(n)
-        Space: O(1)
-        """
         tmp = ListNode()
         cur = tmp
 
@@ -39,11 +38,13 @@ class Solution:
 
         return tmp.next
 
+
+class Solution:
+    """
+    Time:   O(n)
+    Space:  O(n)
+    """
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        """
-        Time:  O(n)
-        Space: O(n)
-        """
         list0 = None
 
         while True:

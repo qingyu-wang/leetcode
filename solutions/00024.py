@@ -14,7 +14,6 @@ class ListNode:
 
 
 class Solution:
-
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
         temp = ListNode(val="temp", next=head)
         curr = temp

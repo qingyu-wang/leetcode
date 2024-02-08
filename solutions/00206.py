@@ -14,7 +14,6 @@ class ListNode:
 
 
 class Solution:
-
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         prev = None
         curr = head
@@ -27,6 +26,8 @@ class Solution:
 
         return prev
 
+
+class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         head_new = None
         node_curr = head

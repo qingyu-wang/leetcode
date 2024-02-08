@@ -7,12 +7,11 @@ from typing import List
 
 
 class Solution:
-
+    """
+    Time:   O(logn)
+    Space:  O(1)
+    """
     def search(self, nums: List[int], target: int) -> int:
-        """
-        Time:  O(logn)
-        Space: O(1)
-        """
         idx_l = 0
         idx_r = len(nums)-1
 
@@ -27,11 +26,15 @@ class Solution:
 
         return -1
 
-    def search_recursive(self, nums: List[int], target: int) -> int:
-        """
-        Time:  O(log(n))
-        Space: O(log(n))
-        """
+
+class Solution:
+    """
+    Time:   O(log(n))
+    Space:  O(log(n))
+
+    Recursive
+    """
+    def search(self, nums: List[int], target: int) -> int:
         if not nums:
             return -1
 
@@ -40,12 +43,12 @@ class Solution:
             return idx_m
 
         elif nums[idx_m] > target:
-            idx = self.search_recursive(nums[:idx_m], target)
+            idx = self.search(nums[:idx_m], target)
             if idx != -1:
                 return idx
 
         else:
-            idx = self.search_recursive(nums[idx_m+1:], target)
+            idx = self.search(nums[idx_m+1:], target)
             if idx != -1:
                 return idx+idx_m+1
 

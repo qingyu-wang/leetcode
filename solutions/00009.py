@@ -4,12 +4,11 @@ https://leetcode.com/problems/palindrome-number/description/
 """
 
 class Solution:
-
+    """
+    Time:   O(n)
+    Space:  O(1)
+    """
     def isPalindrome(self, x: int) -> bool:
-        """
-        Time:  O(n)
-        Space: O(1)
-        """
         if x < 0:
             return False
         x_str = str(x)
@@ -23,10 +22,12 @@ class Solution:
             pe -= 1
         return True
 
+
+class Solution:
+    """
+    Time:   O(n)
+    Space:  O(n)
+    """
     def isPalindrome(self, x: int) -> bool:
-        """
-        Time:  O(n)
-        Space: O(n)
-        """
         x_str = str(x)
         return x_str == x_str[::-1]

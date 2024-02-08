@@ -7,12 +7,11 @@ from typing import List
 
 
 class Solution:
-
+    """
+    Time:   O(logn)
+    Space:  O(1)
+    """
     def searchInsert(self, nums: List[int], target: int) -> int:
-        """
-        Time:  O(logn)
-        Space: O(1)
-        """
         pl = 0
         pr = len(nums)-1
 

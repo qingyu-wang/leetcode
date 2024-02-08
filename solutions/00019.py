@@ -14,11 +14,10 @@ class ListNode:
 
 
 class Solution:
-
+    """
+    Fast and Slow Pointers
+    """
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        """
-        Fast and Slow Pointers
-        """
         temp = ListNode(val="temp", next=head)
         fast = slow = temp
 
@@ -33,6 +32,8 @@ class Solution:
         head = temp.next
         return head
 
+
+class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         temp = ListNode(val="temp", next=head)
         curr = temp

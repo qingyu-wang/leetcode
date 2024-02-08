@@ -7,27 +7,28 @@ from typing import List
 
 
 class Solution:
+    """
+    Bubble Sort
 
-    # 1. Bubble Sort
+    Time:   O(n) - O(n^2)
+    Space:  O(1)
+    """
     def sortArray(self, nums: List[int]) -> List[int]:
-        """
-        Bubble Sort
-        Time:  O(n) - O(n^2)
-        Space: O(1)
-        """
         for i in range(len(nums)-1, 0, -1): # Parse first N-1 value
             for j in range(0, i):
                 if nums[j] > nums[j+1]: # Compare with two values
                     nums[j+1], nums[j] = nums[j], nums[j+1] # Move smaller velue to the front
         return nums
 
-    # 2. Selection Sort
+
+class Solution:
+    """
+    Selection Sort
+
+    Time:   O(n^2)
+    Space:  O(1)
+    """
     def sortArray(self, nums: List[int]) -> List[int]:
-        """
-        Selection Sort
-        Time:  O(n^2)
-        Space: O(1)
-        """
         for i in range(0, len(nums)-1): # Parse first N-1 value
             t = i
             for j in range(i+1, len(nums)): # Compare with other values
@@ -36,13 +37,15 @@ class Solution:
             nums[i], nums[t] = nums[t], nums[i] # Move minimum value to the front
         return nums
 
-    # 3. Insertion Sort
+
+class Solution:
+    """
+    Insertion Sort
+
+    Time:   O(n^2)
+    Space:  O(1)
+    """
     def sortArray(self, nums: List[int]) -> List[int]:
-        """
-        Insertion Sort
-        Time:  O(n^2)
-        Space: O(1)
-        """
         for i in range(0, len(nums)):
             for j in range(i-1, 0-1, -1):
                 if nums[j] > nums[i]:
@@ -52,13 +55,15 @@ class Solution:
                     break
         return nums
 
-    # 4. Quick Sort 1
+
+class Solution:
+    """
+    Quick Sort 1
+
+    Time:   O(nlogn) - O(n^2)
+    Space:  O(logn)
+    """
     def sortArray(self, nums: List[int]) -> List[int]:
-        """
-        Quick Sort
-        Time:  O(nlogn) - O(n^2)
-        Space: O(logn)
-        """
         if len(nums) > 1:
             key = nums[0]
             nums_l = []
@@ -73,13 +78,15 @@ class Solution:
             nums = nums_l + [key] + nums_r
         return nums
 
-    # 4. Quick Sort 2
+
+class Solution:
+    """
+    Quick Sort 2
+
+    Time:   O(nlogn)
+    Space:  O(logn)
+    """
     def sortArray(self, nums: List[int]) -> List[int]:
-        """
-        Quick Sort
-        Time:  O(nlogn)
-        Space: O(logn)
-        """
         def quickSort(arr, i, j):
             if i < j:
                 p = partition(arr, i, j)
@@ -105,13 +112,15 @@ class Solution:
         )
         return nums
 
-    # 5. Merge Sort
+
+class Solution:
+    """
+    Merge Sort
+
+    Time:   O(nlogn)
+    Space:  O(n)
+    """
     def sortArray(self, nums: List[int]) -> List[int]:
-        """
-        Merge Sort
-        Time:  O(nlogn)
-        Space: O(n)
-        """
         def mergesort(arr):
             arr_len = len(arr)
             if arr_len > 1:
@@ -144,13 +153,15 @@ class Solution:
         nums = mergesort(arr=nums)
         return nums
 
-    # 6. Counting Sort
+
+class Solution:
+    """
+    Counting Sort
+
+    Time:   O(n+k)
+    Space:  O(k)
+    """
     def sortArray(self, nums: List[int]) -> List[int]:
-        """
-        Heap Sort
-        Time:  O(n+k)
-        Space: O(k)
-        """
         arr = nums
 
         # Step 1. Find maximum and minimum
@@ -177,13 +188,15 @@ class Solution:
 
         return nums
 
-    # 7. Bucket Sort
+
+class Solution:
+    """
+    Bucket Sort
+
+    Time:   O(n+k)
+    Space:  O(n+k)
+    """
     def sortArray(self, nums: List[int]) -> List[int]:
-        """
-        Heap Sort
-        Time:  O(n+k)
-        Space: O(n+k)
-        """
         bucket_num = 10
         arr_bucket = [[] for _ in range(bucket_num)]
 
@@ -236,13 +249,15 @@ class Solution:
 
         return nums
 
-    # 8. Radix Sort
+
+class Solution:
+    """
+    Radix Sort (Integer)
+
+    Time:   O(n*k)
+    Space:  O(n+k)
+    """
     def sortArray(self, nums: List[int]) -> List[int]:
-        """
-        Radix Sort (Integer)
-        Time:  O(n*k)
-        Space: O(n+k)
-        """
         arr = nums
 
         # Step 1. Find digit number
@@ -279,13 +294,15 @@ class Solution:
         nums = arr_new
         return  nums
 
-    # 9. Heap Sort
+
+class Solution:
+    """
+    Heap Sort
+
+    Time:   O(nlogn)
+    Space:  O(1)
+    """
     def sortArray(self, nums: List[int]) -> List[int]:
-        """
-        Heap Sort
-        Time:  O(nlogn)
-        Space: O(1)
-        """
         def heapify(arr, idx, cur_len):
             idx_l = 2*idx+1
             idx_r = 2*idx+2

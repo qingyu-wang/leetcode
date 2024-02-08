@@ -14,12 +14,11 @@ class ListNode:
 
 
 class Solution:
-
+    """
+    Time:   O(n)
+    Space:  O(1)
+    """
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        """
-        Time:  O(n)
-        Space: O(1)
-        """
         lenA = 0
         curr = headA
         while curr is not None:

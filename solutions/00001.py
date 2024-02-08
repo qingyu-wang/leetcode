@@ -7,12 +7,11 @@ from typing import List
 
 
 class Solution:
-
+    """
+    Time:   O(n)
+    Space:  O(n)
+    """
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        """
-        Time:  O(n)
-        Space: O(n)
-        """
         num_map = {}
         for idx, num in enumerate(nums):
             sub = target - num

@@ -7,12 +7,11 @@ from typing import List
 
 
 class Solution:
-
+    """
+    Time:   O(n)
+    Space:  O(n)
+    """
     def findDuplicate(self, nums: List[int]) -> int:
-        """
-        Time:  O(n)
-        Space: O(n)
-        """
         cache = set()
         for i in nums:
             if i not in cache:
@@ -21,13 +20,15 @@ class Solution:
                 return i
         return
 
-    def findDuplicate(self, nums: List[int]) -> int:
-        """
-        Time:  O(n)
-        Space: O(1)
 
-        Count with index and negative value
-        """
+class Solution:
+    """
+    Time:   O(n)
+    Space:  O(1)
+
+    Count with index and negative value
+    """
+    def findDuplicate(self, nums: List[int]) -> int:
         for num in nums:
             idx = abs(num)
             if nums[idx] < 0:
@@ -35,14 +36,16 @@ class Solution:
             nums[idx] = -nums[idx]
         return len(nums)
 
-    def findDuplicate(self, nums: List[int]) -> int:
-        """
-        Time:  O(n)
-        Space: O(1)
 
-        Floyd's Cycle Detection
-        https://www.youtube.com/watch?v=wjYnzkAhcNk&ab_channel=NeetCode
-        """
+class Solution:
+    """
+    Time:   O(n)
+    Space:  O(1)
+
+    Floyd's Cycle Detection
+    https://www.youtube.com/watch?v=wjYnzkAhcNk&ab_channel=NeetCode
+    """
+    def findDuplicate(self, nums: List[int]) -> int:
         slow = nums[0]
         fast = nums[0]
  

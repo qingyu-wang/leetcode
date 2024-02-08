@@ -4,12 +4,11 @@ https://leetcode.com/problems/valid-parentheses/description/
 """
 
 class Solution:
-
+    """
+    Time:   O(n)
+    Space:  O(n)
+    """
     def isValid(self, s: str) -> bool:
-        """
-        Time:  O(n)
-        Space: O(n)
-        """
         i_map = {
             ")": "(",
             "}": "{",

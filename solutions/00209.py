@@ -7,12 +7,11 @@ from typing import List
 
 
 class Solution:
-    
+    """
+    Time:   O(n)
+    Space:  O(1)
+    """
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        """
-        Time:  O(n)
-        Space: O(1)
-        """
         arr = nums
         point_l = 0
         point_r = 0
@@ -30,11 +29,13 @@ class Solution:
                     sub_arr_len_min = sub_arr_len
         return sub_arr_len_min
 
+
+class Solution:
+    """
+    Time:   O(n)
+    Space:  O(n)
+    """
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        """
-        Time:  O(n)
-        Space: O(n)
-        """
         arr = nums
         sub_arr = []
         sub_arr_sum = 0

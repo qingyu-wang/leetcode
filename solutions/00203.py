@@ -14,7 +14,6 @@ class ListNode:
 
 
 class Solution:
-
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
         head_temp = ListNode(val="temp", next=head)
 
@@ -29,6 +28,8 @@ class Solution:
         head = head_temp.next
         return head
 
+
+class Solution:
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
         # Check head
         while head is not None and head.val == val:

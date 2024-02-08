@@ -15,14 +15,13 @@ class TreeNode:
 
 
 class Solution:
+    """
+    Time:   O(V+E)   # Vertex + Edge
+    Space:  O(V)     # Vertex
 
+    DFS
+    """
     def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
-        """
-        Time:  O(V+E)   # Vertex + Edge
-        Space: O(V)     # Vertex
-
-        DFS
-        """
         if root.val is None:
             return []
 
@@ -43,13 +42,15 @@ class Solution:
         paths = ["->".join([str(i) for i in path]) for path in paths]
         return paths
 
-    def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
-        """
-        Time:  O(V+E)   # Vertex + Edge
-        Space: O(V)     # Vertex
 
-        DFS
-        """
+class Solution:
+    """
+    Time:   O(V+E)   # Vertex + Edge
+    Space:  O(V)     # Vertex
+
+    DFS
+    """
+    def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
         if root.val is None:
             return []
 
@@ -69,13 +70,15 @@ class Solution:
         paths = traverse(root)
         return paths
 
-    def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
-        """
-        Time:  O(V+E)   # Vertex + Edge
-        Space: O(V)     # Vertex
 
-        DFS
-        """
+class Solution:
+    """
+    Time:   O(V+E)   # Vertex + Edge
+    Space:  O(V)     # Vertex
+
+    DFS
+    """
+    def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
         queue = [[root,""]]
         result = []
         while len(queue)!=0:

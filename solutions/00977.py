@@ -7,13 +7,13 @@ from typing import List
 
 
 class Solution:
+    """
+    Compare between the minimum and maximum
 
+    Time:   O(n)
+    Space:  O(n)
+    """
     def sortedSquares(self, nums: List[int]) -> List[int]:
-        """
-        Compare between the minimum and maximum
-        Time:  O(n)
-        Space: O(n)
-        """
         i = 0
         j = len(nums) - 1
         k = len(nums) - 1
