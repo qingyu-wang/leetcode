@@ -13,6 +13,25 @@ class Solution:
     """
     def nextGreatestLetter(self, letters: List[str], target: str) -> str:
         pl = 0
+        pr = len(letters) - 1
+        while pl <= pr:
+            mid = (pl+pr)//2
+            if target > letters[mid]:
+                pl = mid + 1
+            elif target < letters[mid]:
+                pr = mid - 1
+            else:
+                pl = mid + 1
+        return letters[pl if pl != len(letters) else 1]
+
+
+class Solution:
+    """
+    Time:   O(logn)
+    Space:  O(1)
+    """
+    def nextGreatestLetter(self, letters: List[str], target: str) -> str:
+        pl = 0
         pr = len(letters) - 1 
         while pl <= pr:
             mid = (pl+pr)//2
