@@ -14,6 +14,26 @@ class ListNode:
 
 
 class Solution:
+    """
+    Time:   O(n)
+    Space:  O(1)
+    """
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        temp = ListNode(val="temp", next=head)
+        slow = temp
+        fast = temp
+        while True:
+            if slow is None or slow.next is None or slow.next.next is None:
+                break
+            fast = slow.next.next
+            slow.next.next = fast.next
+            fast.next = slow.next
+            slow.next = fast
+            slow = slow.next.next
+        return temp.next
+
+
+class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
         temp = ListNode(val="temp", next=head)
         curr = temp

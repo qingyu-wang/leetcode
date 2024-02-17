@@ -15,22 +15,22 @@ class ListNode:
 
 class Solution:
     """
-    Fast and Slow Pointers
+    Time:   O(n)
+    Space:  O(1)
+ 
+    Two Pointers
     """
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         temp = ListNode(val="temp", next=head)
-        fast = slow = temp
-
+        fast = temp
+        slow = temp
         for _ in range(n):
             fast = fast.next
-
         while fast.next is not None:
             slow = slow.next
             fast = fast.next
-
         slow.next = slow.next.next
-        head = temp.next
-        return head
+        return temp.next
 
 
 class Solution:

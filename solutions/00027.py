@@ -45,6 +45,29 @@ class Solution:
     """
     Time:   O(n)
     Space:  O(1)
+
+    Two Pointers
+    """
+    def removeElement(self, nums: List[int], val: int) -> int:
+        slow = 0
+        fast = len(nums)-1
+        cnt = len(nums)
+        while slow <= fast:
+            if nums[fast] == val:
+                nums[fast] = "_"
+                fast -= 1
+                cnt -= 1
+            elif nums[slow] != val:
+                slow += 1
+            elif nums[slow] == val and nums[fast] != val:
+                nums[slow], nums[fast] = nums[fast], nums[slow]
+        return cnt
+
+
+class Solution:
+    """
+    Time:   O(n)
+    Space:  O(1)
     """
     def removeElement(self, nums: List[int], val: int) -> int:
         n = len(nums)

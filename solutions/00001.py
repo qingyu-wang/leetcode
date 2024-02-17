@@ -10,6 +10,8 @@ class Solution:
     """
     Time:   O(n)
     Space:  O(n)
+
+    Hash Table
     """
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         num_map = {}
